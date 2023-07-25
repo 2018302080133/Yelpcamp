@@ -8,7 +8,7 @@ const ImageSchema = new Schema({
 });
 
 ImageSchema.virtual('customedSizedImgUrl').get(function() {
-    return this.url.replace('/upload', '/upload/w_200');
+    return this.url.replace('/upload', '/upload/w_160');
 });
 
 const opts = { toJSON: { virtuals: true } };
