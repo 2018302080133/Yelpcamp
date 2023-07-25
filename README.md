@@ -1,6 +1,8 @@
 # Yelpcamp
 
-A website for campers to share interesting campgrounds
+A website for campers to share interesting campgrounds. It has been deployed on Heroku.
+
+[Yelpcamp](https://pure-basin-76191-3975f0911cac.herokuapp.com/)
 
 ## Instruction
 
@@ -10,13 +12,13 @@ A website for campers to share interesting campgrounds
 npm install
 ```
 
-### How to run
+### To run it locally:
 
 ```console
 nodemon app.js
 ```
 
-Then visit
+then visit
 ```console
 localhost:3000
 ```
