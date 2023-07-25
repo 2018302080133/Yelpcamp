@@ -2,7 +2,7 @@
 
 A website for campers to share interesting campgrounds. It has been deployed on Heroku.
 
-[Yelpcamp](https://pure-basin-76191-3975f0911cac.herokuapp.com/)
+[https://pure-basin-76191-3975f0911cac.herokuapp.com](https://pure-basin-76191-3975f0911cac.herokuapp.com/)
 
 ## Instruction
 
