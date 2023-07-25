@@ -30,8 +30,8 @@ const seedDB = async () => {
             },
             images: [
                 {
-                  url: 'https://res.cloudinary.com/dq1vvmyex/image/upload/v1690063542/bhaang7wjslu1kaezaww.jpg',
-                  filename: 'bhaang7wjslu1kaezaww'
+                  url: 'https://res.cloudinary.com/dq1vvmyex/image/upload/v1690297799/YelpCamp/tx3ctkoqksuxxmmjieyt.avif',
+                  filename: 'YelpCamp/tx3ctkoqksuxxmmjieyt'
                 }
               ],
             price: 1680,
