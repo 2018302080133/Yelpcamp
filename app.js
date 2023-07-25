@@ -22,7 +22,10 @@ const userRoutes = require('./routes/users');
 
 const User = require('./models/user');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp')
+const MongoStore = require("connect-mongo");
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+
+mongoose.connect(dbUrl)
     .then(() => {
         console.log("Connection open");
     })
@@ -44,9 +47,24 @@ app.use(mongoSanitize());
 
 app.use(morgan('tiny'));
 
+const secret = process.env.SECRET || 'agoodsecret';
+
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    touchAfter: 24 * 60 * 60,
+    crypto: {
+        secret
+    }
+});
+
+store.on("error", function (e) {
+    console.log("SESSION STORE ERROR", e)
+});
+
 const sessionConfig = {
+    store,
     name: 'session',
-    secret: 'agoodsecret',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
